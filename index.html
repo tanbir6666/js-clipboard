@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Clipboard</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button onClick="copyNow()" id="button">
+        copy
+    </button>
+
+    <script>
+      function copyNow() {
+        let input= document.querySelector("#input")
+       input.select()
+    //    navigator.clipboard.writeText(input.value)
+       document.execCommand("Copy")
+      }
+    </script>
+</body>
+</html>
